@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="src/style.css" />
+        <title>Vite App</title>
+    </head>
+    <body class="bg-gray-900 flex items-center justify-center min-h-screen">
+        <div class="flex bg-gray-800 rounded-lg shadow-lg overflow-hidden items-center justify-center">
+          <!-- Left Menu -->
+          <div class="w-64 p-4 bg-gray-800 text-gray-300">
+            <!-- Manual/Auto Switch -->
+            <div class="flex justify-between items-center mb-6">
+              <button
+                class="w-1/2 py-2 bg-gray-700 hover:bg-gray-600 rounded-l text-white text-center"
+              >
+                Manual
+              </button>
+              <button
+                class="w-1/2 py-2 bg-gray-700 hover:bg-gray-600 rounded-r text-white text-center"
+              >
+                Auto
+              </button>
+            </div>
+
+            <!-- Amount Input -->
+            <div class="mb-6">
+              <label for="amount" class="block mb-2 text-sm font-semibold"
+                >Amount</label
+              >
+              <div class="flex items-center border border-gray-600 rounded">
+                <input
+                  type="number"
+                  id="amount"
+                  value="0.00"
+                  class="w-full bg-gray-700 px-2 py-1 text-white outline-none"
+                />
+              </div>
+            </div>
+
+            <!-- Mines Dropdown -->
+            <div class="mb-6">
+              <label for="mines" class="block mb-2 text-sm font-semibold"
+                >Mines</label
+              >
+              <select
+                id="mines"
+                class="w-full bg-gray-700 text-white border border-gray-600 px-2 py-1 rounded"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+              </select>
+              </div>
+
+            <!-- Play Button -->
+            <button
+              class="w-full py-2 bg-green-500 hover:bg-green-400 text-white font-semibold rounded"
+            >
+              Play
+            </button>
+          </div>
+
+          <!-- Right Game Board -->
+          <div class="game-board grid grid-cols-5 gap-2 p-16"></div>
+          <script type="module" src="src/index.js"></script>
+    </body>
+</html>
