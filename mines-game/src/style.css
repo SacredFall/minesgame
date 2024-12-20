@@ -71,4 +71,16 @@
 
 .emerson > a {
     animation: aurora 5s infinite;
+    background-color: #ffff61; /* Set a solid initial background color */
+    border: none; /* Optional: remove borders if you want a smoother look */
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.mine:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
