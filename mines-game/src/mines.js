@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (mines.includes(tileId)) {
       tile.classList.add("mine-tile");
       tile.innerHTML =
-        '<img src="/home/fall/zed-workspace/minesgame/mines-game/gem.png" alt="Mine" style="width: 100%; height: 100%;">';
+        '<img src="bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
       playSound("boom.mp3");
       endGame(false);
     } else {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mines.includes(tileId)) {
         tile.classList.add("mine-tile");
         tile.innerHTML =
-          '<img src="gem.svg" alt="Mine" style="width: 100%; height: 100%;">';
+          '<img src="bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
       } else {
         tile.classList.add("safe-tile");
         tile.innerHTML =
