@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     popup: document.createElement("div"),
     halfbutton: document.querySelector(".half"),
     doublebutton: document.querySelector(".double"),
+    cheatbutton: document.querySelector(".cheat"),
   };
 
   let mines = [];
@@ -178,6 +179,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isNaN(currentAmount) && currentAmount > 0) {
       DOMselectors.amountInput.value = (currentAmount * 2).toFixed(2);
     }
+  });
+  DOMselectors.cheatbutton.addEventListener("click", () => {
+    DOMselectors.gameBoard.querySelectorAll(".mine").forEach((tile) => {
+      const tileId = parseInt(tile.id);
+      if (mines.includes(tileId)) {
+        if (tile.classList.contains("revealed")) {
+          tile.classList.remove("revealed", "mine-tile", "safe-tile");
+          tile.innerHTML = "";
+        } else {
+          tile.classList.add("mine-tile", "revealed");
+          tile.innerHTML =
+            '<img src="/bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
+        }
+      }
+    });
   });
 });
 console.log("running!");
