@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
       tile.classList.add("mine-tile");
       tile.innerHTML =
         '<img src="/home/fall/zed-workspace/minesgame/mines-game/gem.png" alt="Mine" style="width: 100%; height: 100%;">';
-      playSound("path/to/explosion.mp3");
+      playSound("src/boom.mp3");
       endGame(false);
     } else {
       tile.classList.add("safe-tile");
       tile.innerHTML =
         '<img src="src/gem.svg" alt="Gem" style="width: 100%; height: 100%;">';
       console.log(`Revealed tile ${tileId} as safe.`);
-      playSound("path/to/chime.mp3");
+      playSound("src/chime.mp3");
       revealedTiles++;
       if (revealedTiles === 25 - mines.length) {
         endGame(true);
@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function cashOut() {
+    playSound("src/cashout.wav");
     endGame(true);
   }
 
