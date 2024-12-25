@@ -4,7 +4,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "src/mines.html",
+        main: "index.html",
+        mines: "src/mines.html",
       },
     },
   },
