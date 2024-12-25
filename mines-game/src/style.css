@@ -131,9 +131,6 @@
 .mine:hover {
     transform: translateY(-10px);
 }
-.mine-tile {
-    background-color: red;
-}
 
 .popup {
     position: absolute;
