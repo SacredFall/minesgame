@@ -4,7 +4,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "mines-game/mines.html", // Adjust paths based on your project structure
+        main: "mines.html", // Adjust paths based on your project structure
       },
     },
   },
