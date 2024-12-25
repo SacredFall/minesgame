@@ -4,8 +4,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "index.html",
-        mines: "mines.html",
+        main: "mines-game/index.html",
+        mines: "src/mines.html",
         chime: "src/chime.mp3",
         boom: "src/boom.mp3",
         gem: "src/gem.svg",
