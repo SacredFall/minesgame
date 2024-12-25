@@ -5,12 +5,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        mines: "src/mines.html",
-        chime: "src/chime.mp3",
-        boom: "src/boom.mp3",
-        gem: "src/gem.svg",
-        bomg: "src/bomb.svg",
-        cashout: "src/cashout.wav",
+        mines: "/mines.html",
+        chime: "/chime.mp3",
+        boom: "/boom.mp3",
+        gem: "/gem.svg",
+        bomg: "/bomb.svg",
+        cashout: "/cashout.wav",
       },
     },
   },
