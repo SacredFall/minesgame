@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     minesSelect: document.querySelector(".game-container select"),
     balancePanel: document.querySelector(".balance-panel p"),
     popup: document.createElement("div"),
+    halfbutton: document.querySelector(".half"),
+    doublebutton: document.querySelector(".double"),
   };
 
   let mines = [];
@@ -24,6 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isNaN(amount) || amount <= 0) {
       alert("Please enter a valid amount.");
+      return;
+    }
+
+    if (amount > balance) {
+      alert("You cannot bet more than your balance.");
       return;
     }
 
@@ -90,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const amount = parseFloat(DOMselectors.amountInput.value);
       const mineCount = parseInt(DOMselectors.minesSelect.value);
       const profit = calculateProfit(revealedTiles, mineCount);
-      const winnings = profit * amount;
+      const winnings = profit * amount - amount;
       balance += winnings;
       showPopup(
         `Multiplier: ${profit.toFixed(2)}x<br>Winnings: $${winnings.toFixed(2)}`,
@@ -148,12 +155,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return result;
   }
 
-  function calculateProfit(D, M) {
-    const numerator = factorial(M + D - 1);
-    const denominator = factorial(M) * factorial(D - 1);
-    return 0.97 * (numerator / denominator);
+  function calculateProfit(B, S) {
+    //B is total bombs
+    //S is Spaces cleared
+    const probability =
+      (factorial(25 - B) / factorial(25 - B - S)) *
+      (factorial(25 - S) / factorial(25));
+    return 0.99 * (1 / probability);
   }
 
   DOMselectors.playButton.addEventListener("click", startGame);
+
+  DOMselectors.halfbutton.addEventListener("click", () => {
+    const currentAmount = parseFloat(DOMselectors.amountInput.value);
+    if (!isNaN(currentAmount) && currentAmount > 0) {
+      DOMselectors.amountInput.value = (currentAmount / 2).toFixed(2);
+    }
+  });
+
+  DOMselectors.doublebutton.addEventListener("click", () => {
+    const currentAmount = parseFloat(DOMselectors.amountInput.value);
+    if (!isNaN(currentAmount) && currentAmount > 0) {
+      DOMselectors.amountInput.value = (currentAmount * 2).toFixed(2);
+    }
+  });
 });
 console.log("running!");
