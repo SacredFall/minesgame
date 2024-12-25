@@ -59,15 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (mines.includes(tileId)) {
       tile.classList.add("mine-tile");
       tile.innerHTML =
-        '<img src="bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
-      playSound("boom.mp3");
+        '<img src="src/bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
+      playSound("src/boom.mp3");
       endGame(false);
     } else {
       tile.classList.add("safe-tile");
       tile.innerHTML =
-        '<img src="gem.svg" alt="Gem" style="width: 100%; height: 100%;">';
+        '<img src="src/gem.svg" alt="Gem" style="width: 100%; height: 100%;">';
       console.log(`Revealed tile ${tileId} as safe.`);
-      playSound("chime.mp3");
+      playSound("src/chime.mp3");
       revealedTiles++;
       if (revealedTiles === 25 - mines.length) {
         endGame(true);
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function cashOut() {
-    playSound("cashout.wav");
+    playSound("src/cashout.wav");
     endGame(true);
   }
 
@@ -115,11 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mines.includes(tileId)) {
         tile.classList.add("mine-tile");
         tile.innerHTML =
-          '<img src="bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
+          '<img src="src/bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
       } else {
         tile.classList.add("safe-tile");
         tile.innerHTML =
-          '<img src="gem.svg" alt="Gem" style="width: 100%; height: 100%;">';
+          '<img src="src/gem.svg" alt="Gem" style="width: 100%; height: 100%;">';
       }
       tile.classList.add("revealed");
       tile.removeEventListener("click", revealTile);
