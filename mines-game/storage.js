@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     halfbutton: document.querySelector(".half"),
     doublebutton: document.querySelector(".double"),
     cheatbutton: document.querySelector(".cheat"),
-    manualbutton: document.querySelectorAll(".manualbutton"),
-    autobutton: document.querySelectorAll(".autobutton"),
-    manualpanel: document.querySelector(".manualpanel"),
-    autopanel: document.querySelector(".autopanel"),
   };
 
   let mines = [];
@@ -30,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const mineCount = parseInt(DOMselectors.minesSelect.value);
 
     if (isNaN(amount) || amount <= 0) {
-      showPopup("Please enter a valid amount.");
+      alert("Please enter a valid amount.");
       return;
     }
 
     if (amount > balance) {
-      showPopup("You cannot bet more than your balance.");
+      alert("You cannot bet more than your balance.");
       return;
     }
 
@@ -166,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const probability =
       (factorial(25 - B) / factorial(25 - B - S)) *
       (factorial(25 - S) / factorial(25));
-    return 0.99 * (1 / probability);
+    return 1.25 * (1 / probability);
   }
 
   DOMselectors.playButton.addEventListener("click", startGame);
@@ -184,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
       DOMselectors.amountInput.value = (currentAmount * 2).toFixed(2);
     }
   });
-
   DOMselectors.cheatbutton.addEventListener("click", () => {
     DOMselectors.gameBoard.querySelectorAll(".mine").forEach((tile) => {
       const tileId = parseInt(tile.id);
@@ -198,21 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
             '<img src="/bomb.svg" alt="Mine" style="width: 100%; height: 100%;">';
         }
       }
-    });
-    console.log("Cheat On!");
-  });
-
-  DOMselectors.autobutton.forEach((button) => {
-    button.addEventListener("click", () => {
-      DOMselectors.autopanel.classList.remove("hidden");
-      DOMselectors.manualpanel.classList.add("hidden");
-    });
-  });
-
-  DOMselectors.manualbutton.forEach((button) => {
-    button.addEventListener("click", () => {
-      DOMselectors.manualpanel.classList.remove("hidden");
-      DOMselectors.autopanel.classList.add("hidden");
     });
   });
 });
