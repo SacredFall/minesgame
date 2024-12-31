@@ -220,3 +220,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //AUTO MINES FUNCTIONS
 console.log("running!");
+console.log("Beijing");
