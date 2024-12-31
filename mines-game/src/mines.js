@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const DOMselectors = {
     gameContainer: document.querySelector(".game-container"),
     gameBoard: document.querySelector("#mines-board"),
-    playButton: document.querySelector(".game-container button.bg-yellow-300"),
+    playButton: document.querySelector(".game-container button.play"),
     amountInput: document.querySelector(".game-container input[type='text']"),
     minesSelect: document.querySelector(".game-container select"),
     balancePanel: document.querySelector(".balance-panel p"),
@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealBoard();
 
     if (won) {
+      playSound("/cashout.wav");
       const amount = parseFloat(DOMselectors.amountInput.value);
       const mineCount = parseInt(DOMselectors.minesSelect.value);
       const profit = calculateProfit(revealedTiles, mineCount);

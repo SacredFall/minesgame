@@ -33,7 +33,7 @@
                 <!-- Amount -->
                 <div class="flex flex-col">
                     <label class="text-sm mb-1 text-white"> Amount </label>
-                    <div class="flex items-center space-x-2">
+                    <div class="amountInput flex items-center space-x-2">
                         <input
                             type="text"
                             placeholder="0.00"
@@ -55,7 +55,7 @@
                 <div class="flex flex-col">
                     <label class="text-sm mb-1 text-white">Mines</label>
                     <select
-                        class="bg-gray-700 text-gray-300 px-4 py-2 rounded-lg focus:outline-none"
+                        class="minesSelect bg-gray-700 text-gray-300 px-4 py-2 rounded-lg focus:outline-none"
                     >
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -85,7 +85,7 @@
                 </div>
                 <!-- Play Button -->
                 <button
-                    class="bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-400 focus:outline-none"
+                    class="play bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-400 focus:outline-none"
                 >
                     Play
                 </button>
@@ -98,6 +98,7 @@
             </div>
 
             <div class="autopanel hidden flex flex-col space-y-4 pt-6">
+                <!-- Controls -->
                 <div class="flex items-center space-x-2">
                     <button
                         class="manualbutton bg-gray-700 text-gray-300 px-4 py-2 rounded-lg focus:outline-none"
@@ -109,65 +110,72 @@
                     >
                         Auto
                     </button>
-                    <div class="flex flex-col">
-                        <label class="text-sm mb-1 text-white"> Amount </label>
-                        <div class="flex items-center space-x-2">
-                            <input
-                                type="text"
-                                placeholder="0.00"
-                                class="bg-gray-700 text-gray-300 px-4 py-2 rounded-lg w-24 focus:outline-none"
-                            />
-                            <button
-                                class="half bg-gray-700 text-gray-300 px-4 py-2 rounded-lg"
-                            >
-                                ½
-                            </button>
-                            <button
-                                class="double bg-gray-700 text-gray-300 px-4 py-2 rounded-lg"
-                            >
-                                2×
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Mines -->
-                    <div class="flex flex-col">
-                        <label class="text-sm mb-1 text-white">Mines</label>
-                        <select
-                            class="bg-gray-700 text-gray-300 px-4 py-2 rounded-lg focus:outline-none"
-                        >
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                        </select>
-                    </div>
-                    <!-- Play Button -->
-                    <button
-                        class="bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-400 focus:outline-none"
-                    >
-                        Play
-                    </button>
                 </div>
+                <!-- Amount -->
+                <div class="flex flex-col">
+                    <label class="text-sm mb-1 text-white"> Amount </label>
+                    <div class="amountInput flex items-center space-x-2">
+                        <input
+                            type="text"
+                            placeholder="0.00"
+                            class="amountInput bg-gray-700 text-gray-300 px-4 py-2 rounded-lg w-24 focus:outline-none"
+                        />
+                        <button
+                            class="half bg-gray-700 text-gray-300 px-4 py-2 rounded-lg"
+                        >
+                            ½
+                        </button>
+                        <button
+                            class="double bg-gray-700 text-gray-300 px-4 py-2 rounded-lg"
+                        >
+                            2×
+                        </button>
+                    </div>
+                </div>
+                <!-- Mines -->
+                <div class="flex flex-col">
+                    <label class="text-sm mb-1 text-white">Mines</label>
+                    <select
+                        class="minesSelect bg-gray-700 text-gray-300 px-4 py-2 rounded-lg focus:outline-none"
+                    >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                    </select>
+                </div>
+                <!-- Play Button -->
+                <button
+                    class="play bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-400 focus:outline-none"
+                >
+                    Play
+                </button>
+                <!--Random Button -->
+                <button
+                    class="random hidden bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg hover:bg-yellow-400 focus:outline-none"
+                >
+                    Pick a Random Tile
+                </button>
             </div>
             <!-- Game Board -->
             <div
@@ -184,22 +192,71 @@
                 <div id="7" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
                 <div id="8" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
                 <div id="9" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="10" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="11" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="12" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="13" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="14" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="15" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="16" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="17" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="18" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="19" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="20" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="21" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="22" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="23" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="24" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
-                <div id="25" class="w-24 h-24 bg-gray-700 rounded-lg mine"></div>
+                <div
+                    id="10"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="11"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="12"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="13"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="14"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="15"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="16"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="17"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="18"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="19"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="20"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="21"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="22"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="23"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="24"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+                <div
+                    id="25"
+                    class="w-24 h-24 bg-gray-700 rounded-lg mine"
+                ></div>
+            </div>
         </div>
 
         <script type="module" src="mines.js"></script>
