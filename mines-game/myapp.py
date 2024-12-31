@@ -2,7 +2,7 @@ import os
 import time
 
 # File to be written to
-FILE_NAME = "/home/fall/zed-workspace/minesgame/mines-game/src/mines.js"
+FILE_NAME = "/home/fall/zed-workspace/minesgame/temp.html"
 
 # Ensure the directory exists
 os.makedirs(os.path.dirname(FILE_NAME), exist_ok=True)
