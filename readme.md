@@ -9,3 +9,4 @@
 ### 2. Login / Register system
 ### 3. Implement the auto system
 ### 4. Add a random mine picker
+https://prod.liveshare.vsengsaas.visualstudio.com/join?80C3E67B4866508EFF08EE41FCD53CFFCD0E
